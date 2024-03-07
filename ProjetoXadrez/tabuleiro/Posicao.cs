@@ -1,6 +1,7 @@
-﻿
+﻿using ProjetoXadrez.tabuleiro;
 
-namespace tabuleiro
+
+namespace ProjetoXadrez.tabuleiro
 {
     internal class Posicao
     {
