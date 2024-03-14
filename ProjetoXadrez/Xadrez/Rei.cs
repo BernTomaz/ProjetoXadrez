@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ProjetoXadrez.tabuleiro;
 using ProjetoXadrez.tabuleiro.Enum;
 
-namespace ProjetoXadrez.Xadrez
+namespace ProjetoXadrez.xadrez
 {
     internal class Rei : Peca
     {
