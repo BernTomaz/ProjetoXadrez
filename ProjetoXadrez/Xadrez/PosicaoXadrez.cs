@@ -9,6 +9,7 @@ namespace ProjetoXadrez.xadrez
 {
     internal class PosicaoXadrez
     {
+        
         public char Coluna { get; set; }
         public int Linha { get; set; }
 
