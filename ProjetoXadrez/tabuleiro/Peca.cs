@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tabuleiro.Enum;
+using xadrez;
 
 
 
 namespace tabuleiro
 {
-    internal class Peca
+    abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
@@ -28,6 +29,8 @@ namespace tabuleiro
         {
             QtedMovimento++;
         }
+
+        public abstract bool[,] movimentosPossiveis();
 
     }
 }
