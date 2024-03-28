@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjetoXadrez.tabuleiro; 
+using tabuleiro; 
 
-namespace ProjetoXadrez.xadrez
+namespace xadrez
 {
     internal class PosicaoXadrez
     {

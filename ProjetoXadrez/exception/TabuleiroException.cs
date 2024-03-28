@@ -1,8 +1,8 @@
 ﻿ using System;
-using ProjetoXadrez.tabuleiro;
+using tabuleiro;
 
 
-namespace ProjetoXadrez.exception
+namespace exception
 {
     internal class TabuleiroException : Exception
     {

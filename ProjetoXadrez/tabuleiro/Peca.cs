@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjetoXadrez.tabuleiro.Enum;
+using tabuleiro.Enum;
 
 
 
-namespace ProjetoXadrez.tabuleiro
+namespace tabuleiro
 {
     internal class Peca
     {
@@ -24,7 +24,10 @@ namespace ProjetoXadrez.tabuleiro
             Tab = tab;
             QtedMovimento = 0;
         }
+        public void incrementarQtedMovimentos()
+        {
+            QtedMovimento++;
+        }
 
-        
     }
 }

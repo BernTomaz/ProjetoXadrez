@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjetoXadrez;
-using ProjetoXadrez.exception;
+using exception;
 
 
-namespace ProjetoXadrez.tabuleiro
+namespace tabuleiro
 {
+
     internal class Tabuleiro
     {
         public int Linhas { get; set; }
@@ -24,13 +25,13 @@ namespace ProjetoXadrez.tabuleiro
 
         public Peca peca(int linha, int coluna)
         {
-            
+
             return Pecas[linha, coluna];
         }
 
         public bool existePeca(Posicao pos)
         {
-            validarPosicao(pos); 
+            validarPosicao(pos);
             return peca(pos) != null;
         }
 
@@ -49,9 +50,21 @@ namespace ProjetoXadrez.tabuleiro
             p.Posicao = pos;
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.Posicao = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
+        }
+
         public bool posicaoValida(Posicao pos)
         {
-            if(pos.Linha<0 || pos.Linha >= Linhas || pos.Coluna <0 || pos.Coluna >= Colunas)
+            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
             {
                 return false;
             }
@@ -62,7 +75,7 @@ namespace ProjetoXadrez.tabuleiro
         {
             if (!posicaoValida(pos))
             {
-                throw new TabuleiroException("Posição inválida!"); 
+                throw new TabuleiroException("Posição inválida!");
             }
         }
     }

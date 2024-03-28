@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace ProjetoXadrez.tabuleiro.Enum
+namespace tabuleiro.Enum
 {
     enum Cor
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjetoXadrez.tabuleiro;
-using ProjetoXadrez.tabuleiro.Enum;
+using tabuleiro;
+using tabuleiro.Enum;
 
-namespace ProjetoXadrez.xadrez
+namespace xadrez
 {
     internal class Rei : Peca
     {

@@ -1,12 +1,12 @@
-﻿using ProjetoXadrez.tabuleiro.Enum;
-using ProjetoXadrez.tabuleiro;
+﻿using tabuleiro.Enum;
+using tabuleiro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoXadrez.xadrez
+namespace xadrez
 {
     internal class Torre : Peca
     {
