@@ -6,7 +6,7 @@ namespace exception
 {
     internal class TabuleiroException : Exception
     {
-        public TabuleiroException(string msg) : base(msg)
+        public TabuleiroException(string msgErro) : base(msgErro)
         {
 
         }
