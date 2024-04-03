@@ -8,7 +8,7 @@ using exception;
 
 namespace ProjetoXadrez
 {
-    internal class Tela
+    class Tela
     {
 
         public static void imprimirPartida(PartidaDeXadrez partida)
@@ -57,23 +57,20 @@ namespace ProjetoXadrez
             Console.Write("]");
         }
 
-
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
+
             for (int i = 0; i < tab.Linhas; i++)
             {
                 Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.Colunas; j++)
                 {
                     imprimirPeca(tab.peca(i, j));
-
                 }
-
                 Console.WriteLine();
             }
             Console.WriteLine("  a b c d e f g h");
         }
-
 
         public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoePossiveis)
         {
@@ -102,8 +99,6 @@ namespace ProjetoXadrez
             Console.WriteLine("  a b c d e f g h");
             Console.BackgroundColor = fundoOriginal;
         }
-
-
 
         public static PosicaoXadrez lerPosicaoXadrez()
         {
@@ -136,7 +131,6 @@ namespace ProjetoXadrez
                 Console.Write(" ");
             }
         }
-
 
     }
 }

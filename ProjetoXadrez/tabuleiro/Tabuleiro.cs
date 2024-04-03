@@ -10,27 +10,28 @@ using exception;
 namespace tabuleiro
 {
 
-    internal class Tabuleiro
+    class Tabuleiro
     {
+
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        private Peca[,] Pecas;
+        private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
             Linhas = linhas;
             Colunas = colunas;
-            Pecas = new Peca[linhas, colunas];
+            pecas = new Peca[linhas, colunas];
         }
 
         public Peca peca(int linha, int coluna)
         {
-
-            return Pecas[linha, coluna];
+            return pecas[linha, coluna];
         }
+
         public Peca peca(Posicao pos)
         {
-            return Pecas[pos.Linha, pos.Coluna];
+            return pecas[pos.Linha, pos.Coluna];
         }
 
         public bool existePeca(Posicao pos)
@@ -39,14 +40,13 @@ namespace tabuleiro
             return peca(pos) != null;
         }
 
-
         public void colocarPeca(Peca p, Posicao pos)
         {
             if (existePeca(pos))
             {
                 throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
-            Pecas[pos.Linha, pos.Coluna] = p;
+            pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
 
@@ -58,7 +58,7 @@ namespace tabuleiro
             }
             Peca aux = peca(pos);
             aux.Posicao = null;
-            Pecas[pos.Linha, pos.Coluna] = null;
+            pecas[pos.Linha, pos.Coluna] = null;
             return aux;
         }
 

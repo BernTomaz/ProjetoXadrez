@@ -13,7 +13,7 @@ namespace xadrez
     {
         
 
-        public Rei(Tabuleiro tab, Cor cor) : base(cor, tab)
+        public Rei(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
             
         }

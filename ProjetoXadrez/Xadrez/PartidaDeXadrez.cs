@@ -26,11 +26,10 @@ namespace xadrez
             turno = 1;
             jogadorAtual = Cor.Branca;
             terminada = false;
-            xeque = false;
+            xeque = false;            
             pecas = new HashSet<Peca>();
             capturadas = new HashSet<Peca>();
             colocarPecas();
-
         }
 
 
@@ -56,8 +55,7 @@ namespace xadrez
                 tab.colocarPeca(pecaCapturada, destino);
                 capturadas.Remove(pecaCapturada);
             }
-
-            tab.colocarPeca(p, destino);
+            tab.colocarPeca(p, origem);
         }
 
         public void realizaJogada(Posicao origem, Posicao destino)
@@ -67,7 +65,7 @@ namespace xadrez
             if (estaEmXeque(jogadorAtual))
             {
                 desfazMovimento(origem, destino, pecaCapturada);
-                throw new TabuleiroException("Você não pode ser colocar em xeque!");
+                throw new TabuleiroException("Você não pode se colocar em xeque!");
             }
 
             if (estaEmXeque(adversaria(jogadorAtual)))
@@ -85,10 +83,8 @@ namespace xadrez
             }
             else
             {
-
                 turno++;
                 mudaJogador();
-
             }
 
         }
@@ -102,11 +98,11 @@ namespace xadrez
             }
             if (jogadorAtual != tab.peca(pos).Cor)
             {
-                throw new TabuleiroException("A Peça de origem não é sua!");
+                throw new TabuleiroException("A peça de origem escolhida não é sua!");
             }
-            if (!tab.peca(pos).exiteMovimentosPossiveis())
+            if (!tab.peca(pos).existeMovimentosPossiveis())
             {
-                throw new TabuleiroException("Não há movimentos possiveis para a peça de origem escolhida!");
+                throw new TabuleiroException("Não há movimentos possíveis para a peça de origem escolhida!");
             }
         }
 
@@ -188,7 +184,7 @@ namespace xadrez
             Peca R = rei(cor);
             if (R == null)
             {
-                throw new TabuleiroException("Não tem rei da cor" + cor + " no tabuleiro!");
+                throw new TabuleiroException("Não tem rei da cor " + cor + " no tabuleiro!");
             }
             foreach (Peca x in pecasEmJogo(adversaria(cor)))
             {

@@ -5,12 +5,14 @@ using tabuleiro.Enum;
 using exception;
 
 
+
 namespace ProjetoXadrez
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
@@ -55,7 +57,6 @@ namespace ProjetoXadrez
             }
 
             Console.ReadLine();
-
         }
     }
 }

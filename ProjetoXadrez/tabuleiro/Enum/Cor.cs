@@ -9,6 +9,7 @@ namespace tabuleiro.Enum
 {
     enum Cor
     {
+
         Branca,
         Preta,
         Amarela,
@@ -17,5 +18,4 @@ namespace tabuleiro.Enum
         Verde,
         Laranja
     }
-
 }
