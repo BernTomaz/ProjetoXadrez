@@ -56,6 +56,8 @@ namespace xadrez
                 tab.colocarPeca(pecaCapturada, destino);
                 capturadas.Remove(pecaCapturada);
             }
+
+            tab.colocarPeca (p, destino);
         }
 
         public void realizaJogada(Posicao origem, Posicao destino)
@@ -142,6 +144,8 @@ namespace xadrez
             aux.ExceptWith(pecasCapturadas(cor));
             return aux;
         }
+
+
 
         private Cor adversaria(Cor cor)
         {
