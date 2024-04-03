@@ -28,6 +28,10 @@ namespace tabuleiro
 
             return Pecas[linha, coluna];
         }
+        public Peca peca(Posicao pos)
+        {
+            return Pecas[pos.Linha, pos.Coluna];
+        }
 
         public bool existePeca(Posicao pos)
         {
@@ -35,10 +39,6 @@ namespace tabuleiro
             return peca(pos) != null;
         }
 
-        public Peca peca(Posicao pos)
-        {
-            return Pecas[pos.Linha, pos.Coluna];
-        }
 
         public void colocarPeca(Peca p, Posicao pos)
         {
