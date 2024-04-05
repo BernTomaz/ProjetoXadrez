@@ -70,11 +70,8 @@ namespace ProjetoXadrez
                 }
                 Console.WriteLine();
             }
-
-            ConsoleColor aux2 = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Blue; 
             Console.WriteLine("  a b c d e f g h");
-            Console.ForegroundColor = aux2;
+           
 
         }
 

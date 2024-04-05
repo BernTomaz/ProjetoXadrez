@@ -5,17 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using tabuleiro.Enum;
 using tabuleiro;
+using System.Runtime.ConstrainedExecution;
 
 
 namespace xadrez
 {
+
     class Peao : Peca
     {
 
-        
+        private PartidaDeXadrez partida;
 
-        public Peao(Tabuleiro Tab, Cor cor) : base(Tab, cor)
+        public Peao(Tabuleiro tab, Cor Cor, PartidaDeXadrez partida) : base(tab, Cor)
         {
+            this.partida = partida;
         }
 
         public override string ToString()
@@ -62,9 +65,10 @@ namespace xadrez
                 if (Tab.posicaoValida(pos) && existeInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
-                } 
-            } 
+                }
 
+                
+            }
             else
             {
                 pos.definirValores(Posicao.Linha + 1, Posicao.Coluna);
@@ -87,8 +91,10 @@ namespace xadrez
                 if (Tab.posicaoValida(pos) && existeInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
-                } 
-            } 
+                }
+
+               
+            }
 
             return mat;
         }

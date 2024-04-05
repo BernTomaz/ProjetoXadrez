@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using tabuleiro.Enum;
 using tabuleiro;
+using System.Runtime.ConstrainedExecution;
 
 namespace xadrez
 {
     class Cavalo : Peca
     {
 
-        public Cavalo(Tabuleiro tab, Cor cor) : base(tab, cor)
+        public Cavalo(Tabuleiro tab, Cor Cor) : base(tab, Cor)
         {
         }
 
@@ -23,12 +24,13 @@ namespace xadrez
         private bool podeMover(Posicao pos)
         {
             Peca p = Tab.peca(pos);
-            return p == null || p.Cor != Cor;    
+            return p == null || p.Cor != Cor;
         }
 
         public override bool[,] movimentosPossiveis()
         {
-            bool[,] mat = new bool[Tab.Linhas, Posicao.Coluna];
+            bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
+
             Posicao pos = new Posicao(0, 0);
 
             pos.definirValores(Posicao.Linha - 1, Posicao.Coluna - 2);
@@ -46,7 +48,7 @@ namespace xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
             }
-            pos.definirValores(Posicao.Coluna - 1, Posicao.Coluna + 2);
+            pos.definirValores(Posicao.Linha - 1, Posicao.Coluna + 2);
             if (Tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
