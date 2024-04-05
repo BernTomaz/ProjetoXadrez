@@ -4,6 +4,7 @@ using tabuleiro;
 using tabuleiro.Enum;
 using xadrez;
 using exception;
+using System.Runtime.Intrinsics.X86;
 
 
 namespace ProjetoXadrez
@@ -69,7 +70,12 @@ namespace ProjetoXadrez
                 }
                 Console.WriteLine();
             }
+
+            ConsoleColor aux2 = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Blue; 
             Console.WriteLine("  a b c d e f g h");
+            Console.ForegroundColor = aux2;
+
         }
 
         public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoePossiveis)
