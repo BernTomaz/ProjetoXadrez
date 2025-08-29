@@ -1,2 +1,80 @@
-ProjetoXadrez
+# ♟️ ProjetoXadrez
+
+Aplicação de console em **C#** que implementa um jogo de **xadrez completo**.  
+O projeto foi desenvolvido como prática de **Programação Orientada a Objetos (POO)**, aplicando conceitos de encapsulamento, herança, polimorfismo, tratamento de exceções e camadas de domínio.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **C#**  
+- **.NET 6+**  
+- **Programação Orientada a Objetos (POO)**  
+- **Console Application**  
+
+---
+
+## 📌 Funcionalidades
+
+- Implementação de todas as regras do **xadrez tradicional**  
+- Validação de movimentos das peças  
+- Lógica para xeque e xeque-mate  
+- Controle de turnos e alternância entre jogadores  
+- Tratamento de exceções para jogadas inválidas  
+- Tabuleiro renderizado diretamente no console  
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+ProjetoXadrez/
+│-- Board/            # Classes relacionadas ao tabuleiro e às posições
+│-- Chess/            # Classes específicas do jogo de xadrez (peças, movimentos, partida)
+│-- Program.cs        # Ponto de entrada da aplicação
+```
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### 🔹 Pré-requisitos
+- [.NET SDK 6+](https://dotnet.microsoft.com/en-us/download)
+- Editor de código como [Visual Studio](https://visualstudio.microsoft.com/) ou [VS Code](https://code.visualstudio.com/)
+
+### 🔹 Passo a passo
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/BernTomaz/ProjetoXadrez.git
+   cd ProjetoXadrez
+   ```
+
+2. Compile e rode a aplicação:
+   ```bash
+   dotnet run
+   ```
+
+3. O tabuleiro e os movimentos serão exibidos no **console**.
+
+---
+
+## 📊 Modelo Conceitual
+
+- **Board**: representa o tabuleiro e as posições  
+- **Piece**: classe base para todas as peças de xadrez  
+- **ChessPiece** (ex: King, Queen, Bishop, Knight, Rook, Pawn): herdam de Piece e implementam movimentos específicos  
+- **ChessMatch**: gerencia a lógica da partida, incluindo turnos, xeque e xeque-mate  
+
+---
+
+
+
+## 🧑‍💻 Autor
+
+**Bernardo Tomaz**  
+📌 [GitHub](https://github.com/BernTomaz)
+
+---
+
 
