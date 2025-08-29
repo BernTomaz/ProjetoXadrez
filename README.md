@@ -68,13 +68,28 @@ ProjetoXadrez/
 
 ---
 
+## 🕹️ Como Jogar (Resumo)
 
+- **Formato das jogadas:** sempre `coluna(l a h) + linha(1–8)` (ex.: `e2`, `e4`).
+- **Fluxo:** informe a origem → informe o destino.
+- **Turnos:** alternância automática entre brancas e pretas.
 
+### Regras suportadas
+- Movimentos legais de todas as peças.
+- Xeque, xeque-mate e empate por afogamento.
+- **Roque:** mova o rei para `g1/c1/g8/c8`; torre ajustada se válido.
+- **En passant:** funciona automaticamente quando aplicável.
+- **Promoção:** ao chegar na última fileira, digite `Q`, `R`, `B` ou `N`.
+
+### Mensagens comuns
+- Origem inválida → casa vazia, peça do rival ou sem movimentos.
+- Destino inválido → movimento não permitido.
+- Movimento deixa o rei em xeque → jogada rejeitada.
+
+👉 Sempre usar letras minúsculas nas casas (`a2`, `h7`).
+
+---
 ## 🧑‍💻 Autor
 
 **Bernardo Tomaz**  
 📌 [GitHub](https://github.com/BernTomaz)
-
----
-
-
